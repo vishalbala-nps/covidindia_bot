@@ -20,6 +20,6 @@ def statsfetcher():
         return tell("I'm sorry. An error occured. Please try again soon")
     rjson = req.json()
     ijson = rjson["data"]["India"]
-    return ask("As of "+datetime.datetime.strptime(rjson["timestamp"]["updated_time"],"%Y-%m-%d %I:%M %p").strptime("%A	%d %I:%M %p")+" The number of infected people are "+ijson["total"]+", The number of deaths are "+ijson["deaths"]+" and the number of cured people are "+ijson["cured"])
+    return ask("As of "+datetime.datetime.strptime(rjson["timestamp"]["updated_time"],"%Y-%m-%d %I:%M %p").strftime("%A	%d %I:%M %p")+" The number of infected people are "+ijson["total"]+", The number of deaths are "+ijson["deaths"]+" and the number of cured people are "+ijson["cured"])
 if __name__ == "__main__":
     app.run(port=8080)
