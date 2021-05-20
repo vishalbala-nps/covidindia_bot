@@ -9,6 +9,10 @@ env:
 
 steps:
   - type: Command
+    name: "Sleep"
+    command: |
+      sleep 60
+  - type: Command
     name: "Build Source"
     command: |
       echo $testEnv > covidindia_bot.txt
