@@ -13,9 +13,14 @@ steps:
     command: |
       sleep 10
   - type: Command
-    name: "Build Source"
+    name: "Dockerize"
     command: |
-      echo $testEnv > covidindia_bot.txt
+      docker build . --tag "iad.ocir.io/id204we8d65n/balaregistry/hello-bala:1.0"
+  - type: Command
+    name: "Save Docker Image"
+    command: |
+      docker save -o hello-bala_1,0.tar iad.ocir.io/id204we8d65n/balaregistry/hello-bala:1.0
+      
 artifacts:
   - name: result_txt
     type: BINARY
