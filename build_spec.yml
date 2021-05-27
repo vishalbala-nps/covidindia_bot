@@ -11,7 +11,7 @@ steps:
   - type: Command
     name: "Sleep"
     command: |
-      sleep 60
+      sleep 1800
   - type: Command
     name: "Build Source"
     command: |
