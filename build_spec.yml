@@ -23,5 +23,5 @@ steps:
       
 outputArtifacts:
   - name: hello-bala
-    type: BINARY
+    type: DOCKER_IMAGE
     location: hello-bala_1.0.tar
