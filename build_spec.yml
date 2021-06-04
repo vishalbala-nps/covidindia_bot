@@ -24,5 +24,4 @@ steps:
 outputArtifacts:
   - name: hello-bala
     type: BINARY
-    files:
-      - hello-bala_1.0.tar
+    location: hello-bala_1.0.tar
