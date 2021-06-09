@@ -6,6 +6,8 @@ shell: bash
 env:
   variables:
     "testEnv" : "Hello Bala, This is a test variable!!!"
+  exportedVariables:
+    "ABC": "ABC"
 
 steps:
   - type: Command
