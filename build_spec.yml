@@ -7,7 +7,7 @@ env:
   variables:
     "testEnv" : "Hello Bala, This is a test variable!!!"
   exportedVariables:
-    -testEnv
+    - testEnv
 
 steps:
   - type: Command
