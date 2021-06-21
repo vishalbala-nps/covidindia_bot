@@ -8,6 +8,7 @@ env:
     "testEnv" : "Hello Bala1, This is a test variable!!!"
   exportedVariables:
     - VERS
+    - param1
 
 steps:
   - type: Command
@@ -24,6 +25,7 @@ steps:
       docker save -o hello-bala1_1.0.tar iad.ocir.io/id204we8d65n/balaregistry/hello-bala1:1.0
       #echo "docker save is not working" > hello-bala1_1.0.tar
       VERS=10.0
+      param1=100.1
       
 outputArtifacts:
   - name: hello-bala1
