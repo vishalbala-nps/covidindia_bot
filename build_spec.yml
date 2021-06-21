@@ -5,7 +5,7 @@ runAs: root
 shell: bash
 env:
   variables:
-    "testEnv" : "Hello Bala, This is a test variable!!!"
+    "testEnv" : "Hello Bala1, This is a test variable!!!"
   exportedVariables:
     - VERS
 
@@ -17,18 +17,18 @@ steps:
   - type: Command
     name: "Dockerize"
     command: |
-      docker build . --tag "iad.ocir.io/id204we8d65n/balaregistry/hello-bala:1.0"
+      docker build . --tag "iad.ocir.io/id204we8d65n/balaregistry/hello-bala1:1.0"
   - type: Command
     name: "Save Docker Image"
     command: |
-      docker save -o hello-bala_1.0.tar iad.ocir.io/id204we8d65n/balaregistry/hello-bala:1.0
-      #echo "docker save is not working" > hello-bala_1.0.tar
+      docker save -o hello-bala1_1.0.tar iad.ocir.io/id204we8d65n/balaregistry/hello-bala1:1.0
+      #echo "docker save is not working" > hello-bala1_1.0.tar
       VERS=10.0
       
 outputArtifacts:
-  - name: hello-bala
+  - name: hello-bala1
     type: BINARY
-    location: hello-bala_1.0.tar
+    location: hello-bala1_1.0.tar
     artifactParams:
       vers: ${VERS}
       message: ${testEnv}
