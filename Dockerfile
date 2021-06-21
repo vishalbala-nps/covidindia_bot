@@ -1,2 +1,2 @@
-FROM alpine:latest
+FROM ubuntu:latest
 ENTRYPOINT ["echo", "Hello", "Bala"]
