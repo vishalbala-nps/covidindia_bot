@@ -23,14 +23,15 @@ steps:
     name: "Save Docker Image"
     command: |
       docker save -o hello_bala1_1.0.tar iad.ocir.io/id204we8d65n/balaregistry/hello_bala1:1.0
-      #echo "docker save is not working" > hello_bala1_1.0.tar
+      echo "docker image is saved" > hello_bala1_1.0.txt
       VERS=10.0
       param1=100.1
+      echo "param1=$param1 VERS= $VERS" >> hello_bala1_1.0.txt
       
 outputArtifacts:
   - name: hello_bala1
     type: BINARY
-    location: hello_bala1_1.0.tar
+    location: hello_bala1_1.0.txt
     artifactParams:
       vers: ${VERS}
       message: ${testEnv}
